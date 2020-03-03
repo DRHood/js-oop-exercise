@@ -24,7 +24,18 @@ class Tamagotchi{
     yawn(){
         this.restedness--;
         console.log(this.name + ' has current restedness of: ' + this.restedness);
-    }
+    };
+    start(){
+        console.log(this.name);
+        setInterval(cry, 6000);
+        setInterval(yawn, 10000);
+        setInterval(puke, 20000);
+    };
+    stop(){
+        clearInterval(setInterval(cry, 6000));
+        clearInterval(setInterval(yawn, 10000));
+        clearInterval(setInterval(puke, 20000));
+    };
 };
 
 //create new Tamagotchis
@@ -36,6 +47,9 @@ var tamagotchi004 = new Tamagotchi('Donku', 'sylphi');
 
 var tamagotchi005 = new Tamagotchi('Frankie','cacodemon');
 var tamagotchi006 = new Tamagotchi('Izzy', 'imp');
+
+var tamagotchi007 = new Tamagotchi('Igor', 'imp');
+
 //test out your Tamagotchies below via console.logs
 console.log(tamagotchi001);
 console.log(tamagotchi002);
